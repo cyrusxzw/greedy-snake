@@ -1,6 +1,7 @@
 import './style/index.less';
-import Food from './components/Food';
-import ScorePanelfrom from './components/ScorePanel';
+import GameControl from './components/GameControl';
 
+
+new GameControl();
 
 
