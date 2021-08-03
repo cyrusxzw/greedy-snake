@@ -3,11 +3,10 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {
-    "start": "node build/index.js",
-    "build": "tsc",
-    "postinstall": "npm run build"
-  },
+  "scripts":{
+    "start":"node src/server.js",
+    "postinstall":"tsc"
+ },
   "author": "",
   "license": "ISC",
   "dependencies": {
