@@ -21,7 +21,7 @@ export default class Snake{
         if(this.X === value){
             return;
         }
-        if(value < 0 || value > 410){
+        if(value < 0 || value > 400){
             throw new Error('蛇撞墙了！');
         }
 
@@ -58,8 +58,6 @@ export default class Snake{
 
     addBody(){
         this.element.insertAdjacentHTML('beforeend', '<div></div>');
-        console.log(this.body);
-        console.log(this.head)
     }
 
     moveBody(){
@@ -74,7 +72,7 @@ export default class Snake{
 
     checkCross(){
         for(let i = 1; i <=  this.body.length; i++){
-            if((this.body[i] as HTMLElement).offsetLeft === this.X && (this.body[i] as HTMLElement).offsetTop === this.Y){
+            if(this.body[i] && (this.body[i] as HTMLElement).offsetLeft === this.X && (this.body[i] as HTMLElement).offsetTop === this.Y){
                 throw new Error('撞到自己了！');
             }
         }
